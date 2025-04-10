@@ -44,93 +44,57 @@ const InstructionList = styled.ul`
 const InstructionPage: React.FC = () => {
   return (
     <Container>
-      <Title>PhysicalTokenTransfer Contract Instructions</Title>
+      <Title>Swarm Protocol Instructions</Title>
 
-      {/* Introduction */}
       <Section>
-        <SectionTitle>Introduction</SectionTitle>
+        <SectionTitle>🔌 Connecting to the Swarm</SectionTitle>
         <Paragraph>
-          The <strong>PhysicalTokenTransfer</strong> contract provides a secure, password-protected voucher system for transferring and redeeming ETH and ERC20 tokens. Follow these steps to securely interact with the contract.
+          Use MetaMask or any Web3 wallet to connect to the SwarmProtocol dashboard. Confirm you're on the correct chain to interact with oracle and executor contracts.
         </Paragraph>
       </Section>
 
-      {/* Connecting Your Wallet */}
       <Section>
-        <SectionTitle>1️⃣ Connecting Your Wallet</SectionTitle>
-        <Paragraph>
-          To interact with the <strong>PhysicalTokenTransfer</strong> contract, click the <strong>“Connect Wallet”</strong> button on the navigation bar. Ensure you have <strong>MetaMask</strong> or another Ethereum-compatible wallet installed and that you’re connected to the correct Ethereum network.
-        </Paragraph>
-      </Section>
-
-      {/* Interacting with the Contract */}
-      <Section>
-        <SectionTitle>2️⃣ Interacting with the PhysicalTokenTransfer Contract</SectionTitle>
-        <Paragraph>The contract provides several key functionalities:</Paragraph>
+        <SectionTitle>1️⃣ Submitting Data to SwarmOracle</SectionTitle>
         <InstructionList>
-          <li>
-            <strong>🟢 Create Voucher:</strong> Mint a voucher linked to a deposit of ETH or ERC20 tokens.
-          </li>
-          <li>
-            <strong>💸 Transfer Voucher:</strong> Transfer the voucher to another party by updating the password hash.
-          </li>
-          <li>
-            <strong>🔑 Redeem Voucher:</strong> Redeem the tokens by providing the correct password.
-          </li>
-          <li>
-            <strong>⚖️ Fee Management:</strong> Manage fees associated with voucher creation and redemption.
-          </li>
+          <li>Go to the <strong>SwarmOracle Feed</strong> panel.</li>
+          <li>Choose the asset pair (e.g., ETH/USD).</li>
+          <li>Input your current price and submit as a provider.</li>
+          <li>Only whitelisted providers (or staked users) may post data.</li>
         </InstructionList>
       </Section>
 
-      {/* Creating a Voucher */}
       <Section>
-        <SectionTitle>3️⃣ Creating a Voucher</SectionTitle>
+        <SectionTitle>2️⃣ Triggering Automations via SwarmExecutor</SectionTitle>
         <InstructionList>
-          <li>Navigate to the <strong>Voucher Creation Module</strong>.</li>
-          <li>Deposit ETH or ERC20 tokens into the contract.</li>
-          <li>Generate a password for the voucher and store it securely.</li>
-          <li>Your voucher will have a unique identifier, linked to the tokens.</li>
-          <li>Ensure that you securely store the voucher’s password.</li>
+          <li>Open the <strong>Executor Dashboard</strong>.</li>
+          <li>Set target capsules, token pairs, or thresholds.</li>
+          <li>Once price or condition is met, executor will call pre-approved functions.</li>
         </InstructionList>
       </Section>
 
-      {/* Transferring a Voucher */}
       <Section>
-        <SectionTitle>4️⃣ Transferring a Voucher</SectionTitle>
+        <SectionTitle>3️⃣ Managing Swarm Tokens</SectionTitle>
         <InstructionList>
-          <li>Go to the <strong>Voucher Transfer Module</strong>.</li>
-          <li>Enter the voucher ID and the new password hash to transfer the voucher to another party.</li>
-          <li>The new recipient will need the correct password to redeem the voucher.</li>
+          <li>Acquire <strong>IconoclastSwarmToken (IST)</strong> from the token faucet or liquidity pool.</li>
+          <li>Stake tokens to gain voting power and register as a trusted provider.</li>
+          <li>Use staked IST to vote on proposals or upgrade Swarm logic.</li>
         </InstructionList>
       </Section>
 
-      {/* Redeeming a Voucher */}
       <Section>
-        <SectionTitle>5️⃣ Redeeming a Voucher</SectionTitle>
+        <SectionTitle>4️⃣ DAO Governance (Coming Soon)</SectionTitle>
         <InstructionList>
-          <li>Navigate to the <strong>Voucher Redemption Module</strong>.</li>
-          <li>Provide the correct password hash to redeem the tokens.</li>
-          <li>If the password matches, the tokens are transferred to your wallet.</li>
-          <li>If the password is incorrect, the redemption will fail.</li>
+          <li>IST holders will be able to vote on quorum thresholds, provider approvals, and Swarm updates.</li>
+          <li>Staking-based slashing mechanisms may apply in the future to penalize malicious data.</li>
         </InstructionList>
       </Section>
 
-      {/* Troubleshooting */}
       <Section>
-        <SectionTitle>⚠️ Troubleshooting & Support</SectionTitle>
-        <Paragraph>If you encounter issues, please check that:</Paragraph>
+        <SectionTitle>❓ Need Help?</SectionTitle>
         <InstructionList>
-          <li>Your wallet is <strong>connected</strong> and has sufficient ETH for transaction fees.</li>
-          <li>You are on the <strong>correct network</strong> (Ethereum Mainnet or testnet).</li>
-          <li>The <strong>voucher password</strong> is correctly stored and used.</li>
-        </InstructionList>
-        <Paragraph>
-          For further assistance, please reach out via:
-        </Paragraph>
-        <InstructionList>
-          <li>📢 <strong>Telegram</strong></li>
-          <li>💬 <strong>Discord</strong></li>
-          <li>🐦 <strong>Twitter</strong></li>
+          <li>Ensure your wallet is connected and approved as a provider.</li>
+          <li>Check that you have IST tokens staked to gain access to submissions.</li>
+          <li>Join our Swarm support Discord or DAO forum for help.</li>
         </InstructionList>
       </Section>
     </Container>
